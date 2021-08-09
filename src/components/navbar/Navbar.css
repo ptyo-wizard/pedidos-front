@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%; /*img responsives*/
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+.top-bar {
+  background: #ffff;
+  padding-left: 0.5em; /*separar unpoco icono amburguesa*/
+}
+
+.icon-menu {
+  display: flex;
+  justify-content: center; /*alinear horizontal*/
+  align-items: center; /*alinear vertical*/
+
+  width: 40px;
+  height: 40px;
+  cursor: pointer; /*mause, icono mano*/
+}
+
+.icon-menu__bar {
+  background: #19456b;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  display: relative; /*las otras barras, se posicionan con ref a esta*/
+}
+
+.icon-menu__bar:after,
+.icon-menu__bar:before {
+  content: ""; /*obligatorio al usar after o before*/
+  width: 30px;
+  height: 5px;
+  border-radius: 2px;
+  position: absolute;
+  display: block; /*ocupar todo el espacio disponible*/
+  background: #19456b;
+  top: 26px;
+}
+
+.icon-menu__bar:after {
+  top: 10px;
+}
+
+.menu {
+  background: #19456b; /*#ff75a0; 19456b */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+
+  transform: translateX(-100%); /*mover fuera de pantalla*/
+  transition: transform 0.3s;
+  width: 50%;
+}
+
+.menu__item {
+  padding: 1em;
+  border-bottom: 1px solid #fff;
+  text-align: left;
+}
+
+.btn-primary {
+  background: #19456b;
+  border-radius: 4px;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.btn-primary:hover {
+  background: #0c3b64;
+}
+.btn-primary:active {
+  background: #357dbd;
+}
+
+.menu-show {
+  transform: translateX(0); /*se desplaza dentro de pantalla, se add con js*/
+}
+
+.close {
+  background: #fff;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  display: relative;
+  transform: rotate(45deg);
+  top: 50%;
+  cursor: pointer;
+}
+
+.close:after {
+  content: "";
+  background: #fff;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  transform: rotate(90deg);
+  top: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateX(0);
+    width: 88%;
+    background: #ffff;
+  }
+  .menu__item a {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .menu__item,
+  .btn-primary {
+    color: #fff;
+  }
+  .menu__item,
+  .btn-secondary {
+    color: #19456b;
+  }
+
+  .top-bar {
+    display: none;
+  }
+  .menu__item {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    z-index: 5;
+  }
+  .menu__item a {
+    color: #fff;
+  }
+}

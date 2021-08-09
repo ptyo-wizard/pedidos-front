@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-family: "Vollkorn", serif; /*"lato", sans-serif; */
+}
+body {
+  margin: 0;
+  height: 100vh;
+  background: #ffff;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  padding: 24px;
+  color: #19456b;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  /* background: hotpink; */
+  align-items: flex-start;
+  flex-direction: row;
+  margin: 3rem;
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  justify-content: flex-start;
+  /* background: gray; */
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .form-button {
+    width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    margin-top: 1rem;
+  }
+}
+
+/*
+
+
+.col {
+  display: flex;
+  justify-content: flex-start;
+  background: gray;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+*/

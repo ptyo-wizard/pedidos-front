@@ -1,0 +1,35 @@
+.form-control {
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid #19456b;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.message {
+  color: #c70039;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  padding-left: 10px;
+}
+
+.form-button {
+  width: 100%;
+  border: 0;
+  background: #19456b;
+  color: #fff;
+  font-size: 20px;
+  padding: 6px;
+  border-radius: 4px;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background: #0c3b64;
+  color: #fff;
+}
+
+.form-button:active {
+  background: #357dbd;
+}
